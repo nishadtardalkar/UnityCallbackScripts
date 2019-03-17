@@ -66,7 +66,9 @@ public class CallbackTimer : MonoBehaviour
 
             checkAfter = float.MaxValue;
             toClear.Clear();
-            foreach (object key in tasks.Keys)
+            object[] keys = new object[tasks.Keys.Count];
+            tasks.Keys.CopyTo(keys, 0);
+            foreach (object key in keys)
             {
                 Task t = (Task)tasks[key];
                 if (Time.time >= t.ExecuteAt)
