@@ -6,7 +6,8 @@
   <li>Attach that script to any gameobject in the scene</li>
   <li>Make the calls</li>
 </ul>
-[![FAILED TO LOAD IMAGE](https://img.youtube.com/vi/7uHWhbDlbK8/0.jpg)](https://www.youtube.com/watch?v=7uHWhbDlbK8)
+
+[![](https://img.youtube.com/vi/7uHWhbDlbK8/0.jpg)](https://www.youtube.com/watch?v=7uHWhbDlbK8)
 
 <h2>Scripts</h2>
 <h3>Callback Timer</h3>
