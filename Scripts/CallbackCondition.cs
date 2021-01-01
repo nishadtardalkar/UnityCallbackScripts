@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -106,8 +106,15 @@ public class CallbackCondition : MonoBehaviour
         foreach (object key in tasks.Keys)
         {
             Task t = (Task)tasks[key];
-            object d1 = t.Data1.GetValue(t.Data1UnderObject);
-            object d2 = t.Data2.GetValue(t.Data2UnderObject);
+            object d1 = null, d2 = null;
+            if (t.Data1 != null)
+            {
+                d1 = t.Data1.GetValue(t.Data1UnderObject);
+            }
+            if (t.Data2 != null)
+            {
+                d2 = t.Data2.GetValue(t.Data2UnderObject);
+            }
             if (t.Comparison == Comparison.EQUAL)
             {
                 if (t.DataType == DataType.FLOAT && (float)d1 == (float)d2)
