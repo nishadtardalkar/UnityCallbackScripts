@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -71,6 +71,7 @@ public class CallbackTimer : MonoBehaviour
             foreach (object key in keys)
             {
                 Task t = (Task)tasks[key];
+                if (t == null) { toClear.Add(key); continue; }
                 if (Time.time >= t.ExecuteAt)
                 {
                     t.Work(t.Data);
